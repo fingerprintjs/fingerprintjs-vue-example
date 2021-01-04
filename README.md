@@ -1,6 +1,6 @@
 # FingerprintJS Pro working in Vue
 
-## Using create-react-app:
+## Using create-vue-app:
 
 First, create an app with the following command:
 
@@ -25,7 +25,7 @@ Any changes you make to the source files will automatically update.
 
 ## Editing files
 
-Inside the `src/components` folder, you will find a file called `App.vue`. This is the only file I have changed in order to use FingerprintJS Pro in this example.
+Inside the `src/components` folder, you will find a file called `App.vue`. This is the only file altered in order to use FingerprintJS Pro for this example.
 
 1. First, you will want to install the npm package for FingerprintJS. Go to the console and run:
 
@@ -33,16 +33,16 @@ Inside the `src/components` folder, you will find a file called `App.vue`. This 
 $ npm install @fingerprintjs/fingerprintjs-pro --save
 ```
 
-You can now import the package into the script section:
+You can now import the package at the top of the script section:
 
 ```javascript
 // App.vue
 import FingerprintJS from "@fingerprintjs/fingerprintjs-pro";
 ```
 
-2. Store Tokens.
+2. Using Tokens.
 
-I have directly inserted the tokens as variables. I am able to do so by whitelisting the domains in the customer dashboard, but you may want to keep these safe in a .env file instead so that these sensitive tokens arent revealed in your codebase. For the server API, it is recommended to use basic auth in request headers instead of using a token. You can read more about it <a href="https://dev.fingerprintjs.com/docs/server-api#authentication" target="_blank"> here</a>.
+If you assign your tokens to variables directly in the file, make sure to protect them by whitelisting the domains in the customer dashboard. Another option is to keep these tokens in a `.env` file and reference them from there. For the server API, it is recommended to use basic auth in request headers instead of using a token. You can read more about it <a href="https://dev.fingerprintjs.com/docs/server-api#authentication" target="_blank"> here</a>.
 
 3. Getting a visitor ID.
 
@@ -61,7 +61,7 @@ mounted: function () {
 },
 ```
 
-In this example, I am using the pre-defined `mounted` method inherited from the Vue class. This function will run when the window is loaded, making the request for the visitorID automatic. The value is then stored to a class attribute called visitorId which can then be referenced.
+In this example, I am using the pre-defined `mounted` method inherited from the Vue class. This method will be called when the window is loaded, making the request for the visitorID automatic. The value is then stored to a class attribute called `visitorId` which can then be referenced.
 
 4. Querying the server API for visitor history:
 
@@ -90,7 +90,7 @@ methods: {
 },
 ```
 
-As you can see, a method has been saved for the class component and will be called from the onclick attribute in the html button :
+As you can see, a method has been saved for the class component and will be called from the `onclick` attribute in the html button :
 
 ```html
 <button v-on:click="callServerAPI">Get Visit History</button>
@@ -98,6 +98,6 @@ As you can see, a method has been saved for the class component and will be call
 
 ## Further Steps
 
-If you would like to know more, please visit our [Documentation](https://dev.fingerprintjs.com/docs) to see best practices and guides on how to implement them.
+If you would like to learn more, please visit our [Documentation](https://dev.fingerprintjs.com/docs) to see best practices for using FingerprintJS and guides on how to implement them.
 
-If you have a question, please contact us at [support@fingerprintjs.com](support@fingerprintjs.com).
+If you have any questions, please contact us at [support@fingerprintjs.com](support@fingerprintjs.com).
