@@ -16,15 +16,16 @@
     "email": "david.l.corson@gmail.com"
   },
   "dependencies": {
-    "offline-plugin": "^4.8.0",
+    "@fingerprintjs/fingerprintjs-pro": "^3.2.2",
     "normalize.css": "^7.0.0",
     "object-assign": "^4.1.1",
+    "offline-plugin": "^4.8.0",
     "promise-polyfill": "^6.0.2"
   },
   "devDependencies": {
     "poi": "^9.0.0",
     "poi-preset-bundle-report": "^2.0.0",
-    "serve": "^6.1.0",
-    "poi-preset-offline": "^9.0.0"
+    "poi-preset-offline": "^9.0.0",
+    "serve": "^6.1.0"
   }
 }
