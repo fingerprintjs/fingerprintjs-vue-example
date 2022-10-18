@@ -1,3 +1,6 @@
+## 🕸️ THIS PROJECT IS ARCHIVED AND NOT MAINTAINED 🕸️
+
+### 🚙 USE THIS INSTEAD: [fingerprintjs/fingerprintjs-pro-vue](https://github.com/fingerprintjs/fingerprintjs-pro-vue)
 # FingerprintJS Pro working in Vue
 
 ## Using create-vue-app:
